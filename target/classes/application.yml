@@ -1,0 +1,47 @@
+spring:
+  profiles:
+    active: dev
+  application:
+    name: backend
+  # DataSource Config
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://124.221.169.181:3306/partner?serverTimezone=UTC
+    username: partner
+    password: 123456
+  # session 失效时间（分钟）
+  session:
+    timeout: 86400
+    store-type: redis
+  mvc:
+    pathmatch:
+      matching-strategy: ANT_PATH_MATCHER
+  # redis 配置
+#  redis:
+#    port: 6379
+#    host: localhost
+#    database: 1
+  redis:
+    port: 6379
+    host: 124.221.169.181
+    database: 1
+    password: 123456
+  mail:
+    host: smtp.qq.com
+    # 你的QQ邮箱，这里为发件人，填自己的即可
+    username: 2260391948@qq.com
+    # 你的QQ邮箱授权码
+    password: vqgvafeipqdheafh
+server:
+  port: 8090
+  servlet:
+    context-path: /api
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: false
+  #    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      logic-delete-field: isDelete # 全局逻辑删除的实体字段名(since 3.3.0,配置后可以忽略不配置步骤2)
+      logic-delete-value: 1 # 逻辑已删除值(默认为 1)
+      logic-not-delete-value: 0 # 逻辑未删除值(默认为 0)

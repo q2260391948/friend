@@ -1,0 +1,27 @@
+{
+  "groups": [
+    {
+      "name": "spring.redis",
+      "type": "com.my.xiaozhang.config.RedissonConfig",
+      "sourceType": "com.my.xiaozhang.config.RedissonConfig"
+    }
+  ],
+  "properties": [
+    {
+      "name": "spring.redis.host",
+      "type": "java.lang.String",
+      "sourceType": "com.my.xiaozhang.config.RedissonConfig"
+    },
+    {
+      "name": "spring.redis.password",
+      "type": "java.lang.String",
+      "sourceType": "com.my.xiaozhang.config.RedissonConfig"
+    },
+    {
+      "name": "spring.redis.port",
+      "type": "java.lang.String",
+      "sourceType": "com.my.xiaozhang.config.RedissonConfig"
+    }
+  ],
+  "hints": []
+}
